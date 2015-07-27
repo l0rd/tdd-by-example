@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class FizzBuzzTest {
 
     @Test
-    void printAnInteger() {
+    public void printAnInteger() {
         FizzBuzz fb = new FizzBuzz();
         assertEquals("1", fb.printInteger(1));
     }
