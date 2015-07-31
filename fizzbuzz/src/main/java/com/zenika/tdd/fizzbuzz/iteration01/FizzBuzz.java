@@ -6,7 +6,7 @@ package com.zenika.tdd.fizzbuzz.iteration01;
 
 public class FizzBuzz {
 
-    public String printInteger(int i) {
+    public String print(int i) {
         return Integer.toString(i);
     }
 

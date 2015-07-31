@@ -10,36 +10,43 @@ import static org.junit.Assert.assertEquals;
 public class FizzBuzzTest {
 
     @Test
-    public void printAnInteger() {
+    public void should_print_string_representation_when_passing_an_integer() {
         FizzBuzz fb = new FizzBuzz();
-        assertEquals("1", fb.run(1));
+        assertEquals("1", fb.print(1));
     }
 
     @Test
-    public void printAMultipleOfThree() {
+    public void should_print_fizz_when_passing_a_mutiple_of_three() {
         FizzBuzz fb = new FizzBuzz();
-        assertEquals("12fizz", fb.run(3));
-        assertEquals("12fizz", fb.run(6));
+        assertEquals("fizz", fb.print(3));
+        assertEquals("fizz", fb.print(6));
     }
 
     @Test
-    public void printMultiplesOfFive() {
+    public void should_print_buzz_when_passing_a_mutiple_of_five() {
         FizzBuzz fb = new FizzBuzz();
-        assertEquals("buzz", fb.printInteger(5));
-        assertEquals("buzz", fb.printInteger(20));
+        assertEquals("buzz", fb.print(5));
+        assertEquals("buzz", fb.print(20));
     }
 
     @Test
-    public void printMultiplesOfThreeAndFive() {
+    public void should_print_fizzbuzz_when_passing_a_mutiple_of_three_and_five() {
         FizzBuzz fb = new FizzBuzz();
-        assertEquals("fizzbuzz", fb.run(15).endsWith(-8));
-        assertEquals("fizzbuzz", fb.run(30).substring(-8));
+        assertEquals("fizzbuzz", fb.print(15));
+        assertEquals("fizzbuzz", fb.print(30));
     }
 
     @Test
-    public void printMultipleIntegers() {
+    public void should_print_valid_string_when_running_fizzbuzz() {
         FizzBuzz fb = new FizzBuzz();
-        assertEquals("12fizz34buzz", fb.run(5));
-        assertEquals("12fizz34buzz67891011121314fizzbuzz16", fb.run(16));
+        assertEquals("12fizz4buzz", fb.run(5));
+        assertEquals("12fizz4buzzfizz78fizzbuzz11fizz1314fizzbuzz16", fb.run(16));
+        assertEquals("12fizz4buzzfizz78fizzbuzz11fizz1314fizzbuzz" +
+                "1617fizz19buzzfizz2223fizzbuzz26fizz2829fizzbuzz" +
+                "3132fizz34buzzfizz3738fizzbuzz41fizz4344fizzbuzz" +
+                "4647fizz49buzzfizz5253fizzbuzz56fizz5859fizzbuzz" +
+                "6162fizz64buzzfizz6768fizzbuzz71fizz7374fizzbuzz" +
+                "7677fizz79buzzfizz8283fizzbuzz86fizz8889fizzbuzz" +
+                "9192fizz94buzzfizz9798fizzbuzz", fb.run(100));
     }
 }

@@ -9,8 +9,8 @@ import org.junit.Test;
 public class FizzBuzzTest {
 
     @Test
-    public void printAnInteger() {
+    public void should_print_string_representation_when_passing_an_integer() {
         FizzBuzz fb = new FizzBuzz();
-        assertEquals("1", fb.printInteger(1));
+        assertEquals("1", fb.print(1));
     }
 }
